@@ -1,0 +1,20 @@
+Manifest-Version: 1.0
+Created-By: Apache Maven 3.6.0
+Built-By: travis
+Build-Jdk: 11.0.2
+Bundle-ManifestVersion: 2
+Bundle-Name: Vitruv Framework Change Metamodel
+Bundle-SymbolicName: tools.vitruv.framework.change
+Automatic-Module-Name: tools.vitruv.framework.change
+Bundle-Version: 0.3.0.202004201447
+Bundle-RequiredExecutionEnvironment: JavaSE-11
+Require-Bundle: org.apache.log4j,com.google.guava,org.eclipse.xtext.xbas
+ e.lib,org.eclipse.xtend.lib,org.eclipse.xtend.lib.macro,org.eclipse.emf
+ .ecore.change,tools.vitruv.framework.util,edu.kit.ipd.sdq.commons.util.
+ emf,tools.vitruv.framework.tuid,tools.vitruv.framework.change.echange;v
+ isibility:=reexport,tools.vitruv.framework.change.interaction
+Export-Package: tools.vitruv.framework.change.description,tools.vitruv.f
+ ramework.change.preparation,tools.vitruv.framework.change.recording,too
+ ls.vitruv.framework.change.description.impl;x-internal:=true
+Bundle-Vendor: vitruv.tools
+

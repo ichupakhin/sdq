@@ -1,0 +1,21 @@
+Manifest-Version: 1.0
+Created-By: Apache Maven 3.6.0
+Built-By: travis
+Build-Jdk: 11.0.2
+Bundle-ManifestVersion: 2
+Bundle-Name: Vitruv Framework Change Processing
+Bundle-SymbolicName: tools.vitruv.framework.change.processing;singleton:
+ =true
+Automatic-Module-Name: tools.vitruv.framework.change.processing
+Bundle-Version: 0.3.0.202004201447
+Bundle-RequiredExecutionEnvironment: JavaSE-11
+Require-Bundle: org.apache.log4j,com.google.guava,org.eclipse.xtext.xbas
+ e.lib,org.eclipse.xtend.lib,org.eclipse.xtend.lib.macro,edu.kit.ipd.sdq
+ .commons.util.emf,tools.vitruv.framework.util,tools.vitruv.framework.co
+ rrespondence;visibility:=reexport,tools.vitruv.framework.userinteractio
+ n;visibility:=reexport,tools.vitruv.framework.change,tools.vitruv.frame
+ work.metamodel
+Export-Package: tools.vitruv.framework.change.processing,tools.vitruv.fr
+ amework.change.processing.impl
+Bundle-Vendor: vitruv.tools
+

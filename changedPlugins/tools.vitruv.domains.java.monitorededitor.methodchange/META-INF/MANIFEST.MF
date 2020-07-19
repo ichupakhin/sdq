@@ -1,0 +1,31 @@
+Manifest-Version: 1.0
+Created-By: Apache Maven 3.6.0
+Built-By: travis
+Build-Jdk: 11.0.2
+Bundle-ManifestVersion: 2
+Bundle-Name: Vitruvius Domain Java Monitored Editor Method Changes
+Bundle-SymbolicName: tools.vitruv.domains.java.monitorededitor.methodcha
+ nge;singleton:=true
+Automatic-Module-Name: tools.vitruv.domains.java.monitorededitor.methodc
+ hange
+Bundle-Version: 0.3.0.202004201603
+Bundle-RequiredExecutionEnvironment: JavaSE-11
+Require-Bundle: com.google.guava,org.apache.commons.lang;bundle-version=
+ "2.6.0",org.eclipse.ui,org.eclipse.core.resources;bundle-version="3.9.0
+ ",org.eclipse.core.runtime,org.eclipse.jdt.core,org.eclipse.jface.text;
+ bundle-version="3.9.0",org.eclipse.swt,org.eclipse.text,org.eclipse.ui.
+ workbench.texteditor,org.eclipse.xtend.lib,org.eclipse.xtext.xbase.lib,
+ tools.vitruv.domains.java.monitorededitor.astchangelistener;bundle-vers
+ ion="0.1.0",tools.vitruv.domains.java.monitorededitor.changeclassificat
+ ion;bundle-version="0.1.0",tools.vitruv.domains.java.monitorededitor.ja
+ vamodel2ast;bundle-version="0.1.0",tools.vitruv.domains.java.monitorede
+ ditor;bundle-version="0.1.0";visibility:=reexport,tools.vitruv.framewor
+ k.util,tools.vitruv.framework.change.echange,tools.vitruv.domains.java.
+ echange,org.emftext.language.java,tools.vitruv.framework.change
+Bundle-Vendor: vitruv.tools
+Export-Package: tools.vitruv.domains.java.monitorededitor.methodchange.c
+ hangeclassifiers;x-internal:=true,tools.vitruv.domains.java.monitoreded
+ itor.methodchange.changeresponder;x-internal:=true,tools.vitruv.domains
+ .java.monitorededitor.methodchange.events;x-internal:=true,tools.vitruv
+ .domains.java.monitorededitor.methodchange.utils;x-internal:=true
+

@@ -1,0 +1,29 @@
+Manifest-Version: 1.0
+Created-By: Apache Maven 3.6.0
+Built-By: travis
+Build-Jdk: 11.0.2
+Bundle-ManifestVersion: 2
+Bundle-Name: Vitruvius Domain Java ASTChangeListener
+Bundle-SymbolicName: tools.vitruv.domains.java.monitorededitor.astchange
+ listener;singleton:=true
+Automatic-Module-Name: tools.vitruv.domains.java.monitorededitor.astchan
+ gelistener
+Bundle-Version: 0.3.0.202004201603
+Bundle-Activator: tools.vitruv.domains.java.monitorededitor.astchangelis
+ tener.activator.Activator
+Require-Bundle: org.eclipse.ui,org.eclipse.core.runtime,org.eclipse.jdt.
+ core,org.eclipse.core.resources;bundle-version="3.8.100",tools.vitruv.d
+ omains.java.monitorededitor.changeclassification;bundle-version="0.1.0"
+ ,tools.vitruv.domains.java.monitorededitor.javamodel2ast;bundle-version
+ ="0.1.0",org.apache.log4j,tools.vitruv.framework.util
+Bundle-RequiredExecutionEnvironment: JavaSE-11
+Bundle-ActivationPolicy: lazy
+Export-Package: tools.vitruv.domains.java.monitorededitor.astchangeliste
+ ner,tools.vitruv.domains.java.monitorededitor.astchangelistener.activat
+ or;x-internal:=true,tools.vitruv.domains.java.monitorededitor.astchange
+ listener.classification,tools.vitruv.domains.java.monitorededitor.astch
+ angelistener.classification.postchange;x-internal:=true,tools.vitruv.do
+ mains.java.monitorededitor.astchangelistener.classification.postreconci
+ le;x-internal:=true
+Bundle-Vendor: vitruv.tools
+
