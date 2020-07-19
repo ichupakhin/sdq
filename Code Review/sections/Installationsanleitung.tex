@@ -1,0 +1,44 @@
+\chapter{Installationsanleitung}
+\label{ch:Installationsanleitung}
+
+
+\section{Software-Installation}
+\label{sec:Software-Installation}
+\begin{itemize}
+\item Java, Version 12 
+\item Eclipse Modeling Tools, Version 2020-03 \\\href{https://www.eclipse.org/downloads/packages/release/2020-03/r}{https://www.eclipse.org/downloads/packages/release/2020-03/r}
+\item In Eclipse im Menü "Help -> Install new software" die folgenden Plugins installieren:
+	\begin{itemize}
+	\item Henshin\\\href{http://download.eclipse.org/modeling/emft/henshin/updates/release}{http://download.eclipse.org/modeling/emft/henshin/updates/release} 
+	\item EMFText, Version 1.4.1 \\\href{http://update.emftext.org/trunk/}{http://update.emftext.org/trunk/}
+	\item JaMoPP, Version 1.4.1 \\\href{http://update.jamopp.org/trunk/}{http://update.jamopp.org/trunk/}	
+	\item Palladio, Version 4.1 (release 1.1.0) \\\href{https://updatesite.palladio-simulator.com/palladio-build-updatesite/releases/1.1.0/}{https://updatesite.palladio-simulator.com/palladio-build-updatesite/releases/1.1.0/}
+	\item Vitruvius \\\href{https://vitruv-tools.github.io/updatesite/nightly/}{https://vitruv-tools.github.io/updatesite/nightly/}
+	\item SoMoX \\\href{http://kit-sdq.github.io/updatesite/nightly/somox/jamopp/}{http://kit-sdq.github.io/updatesite/nightly/somox/jamopp/}
+	\end{itemize}
+\item Die folgenden Plugins von \href{https://github.com/vitruv-tools/Vitruv-Applications-PCMJavaAdditionals}{https://github.com/vitruv-tools/Vitruv-Applications-PCMJavaAdditionals} von dem Branch "modelsUpdateFromGitCommits"  herunterladen und in Eclipse workspace importieren (File -> Import -> General -> Existing Projects into Workspace):
+	\begin{itemize}
+	\item org.palladiosimulator.pcm.modified
+	\item org.somox.test.gast2seff
+	\item tools.vitruv.applications.pcmjava.integrationFromGit
+	\item tools.vitruv.applications.pcmjava.integrationFromGit.test
+	\item tools.vitruv.applications.pcmjava.linkingintegration
+	\item tools.vitruv.applications.pcmjava.linkingintegration.change2command
+	\item tools.vitruv.applications.pcmjava.linkingintegration.ejbtransformations
+	\item tools.vitruv.applications.pcmjava.seffstatements
+	\item tools.vitruv.applications.pcmjava.seffstatements.pojotransformations
+	\end{itemize}
+\item Alle Plugins von \href{https://github.com/maxil063/sdq/tree/master/changedPlugins}{https://github.com/maxil063/sdq/tree/master/changedPlugins} von dem Branch "master"  herunterladen und in Eclipse workspace importieren (File -> Import -> General -> Existing Projects into Workspace).
+\end{itemize}
+
+\section{Ausführung von Tests}
+\label{sec:Ausführung von Tests}
+In Eclipse Run Configuration öffnen (Run -> Run Configuration). In der Liste 'JUnit Plug-in Test' das Plugin tools.vitruv.applications.pcmjava.integrationFromGit.test wählen. Es wird empfohlen, die Tests einzeln auszuführen. 'Run a single test' aktivieren, als 'Test Class' einen Test aus der Liste wählen (Die Namen von den ausführbaren Tests fangen mit 'IA' oder mit 'NIA' an), als 'Test runner' JUnit 4 wählen und die Option 'Run in UI Thread' deaktivieren (das ermöglicht eine Interaktion mit dem Benutzer mithilfe von User Dialogs).  
+\\
+Während der Ausführung wird in manchen Tests ein User Dialog mehrmals gezeigt, wo der Benutzer eine Wahl treffen muss. Falls der Benutzer keine Wahl trifft, wird der Test nach dem zweiten Timeout weiter ausgeführt und liefert falsche Ergebnisse oder schlägt fehl. Die folgenden Wahlmöglichkeiten werden zur Zeit unterstützt:
+\begin{itemize}
+\item 'create Basic Component' falls ein Package oder eine Klasse erstellt wurde
+\item 'create interface' falls ein Interface erstellt wurde
+\end{itemize}
+In manchen Tests werden Timeouts ausgelöst, obwohl es kein User Dialog angezeigt wurde. In diesem Fall wird der Test nach zwei Timeouts weiter korrekt ausgeführt. 
+ 

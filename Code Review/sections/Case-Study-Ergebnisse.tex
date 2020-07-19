@@ -1,0 +1,174 @@
+\chapter{Case-Study-Ergebnisse}
+\label{ch:Case-Study-Ergebnisse}
+Für unsere Case-Study haben wir das Projekt namens 'eu.fpetersen.cbs.pc' \footnote{\href{https://github.com/vitruv-tools/Vitruv-Applications-PCMJavaAdditionals/tree/master/tests/tools.vitruv.applications.pcmjava.linkingintegration.tests/example_code/eu.fpetersen.cbs.pc}{eu.fpetersen.cbs.pc}} benutzt. Für dieses Projekt haben wir ein Git Repository initialisiert und Commits für unterschiedliche Arten von Änderungen erstellt. Anschließend haben wir das Projekt in Vitruvius integriert, Commits auf dem integrierten Projekt angewandt und die Korrektheit von den aktualisierten Modellen überprüft. Die Ergebnisse sind in der Tabelle \ref{tab:casestudy} abgebildet.
+
+
+\begin{tiny}
+%\resizebox{\textwidth}{!}{
+% Please add the following required packages to your document preamble:
+% \usepackage{longtable}
+% Note: It may be necessary to compile the document several times to get a multi-page table to line up properly
+
+%\setlength\LTleft{0pt}
+%\setlength\LTright{0pt}
+%\begin{longtable}[c]{@{\extracolsep{\fill}}|p{3cm}|p{3cm}|p{2cm}|%p{2cm}|p{2cm}|p{4cm}|}
+
+
+
+\begin{longtable}[c]{|p{2.2cm}|p{3.5cm}|p{1cm}|p{1cm}|p{1cm}|p{4cm}|}
+
+%\scriptsize
+%\begin{tabularx}{\textwidth}{XXX}
+\hline
+Test & Subtests & JaMoPP Codebuffer & JaMoPP Modelle & PCM Modelle & Probleme \\ \hline
+\endhead
+%
+testClassAnnotation 			(IA) & testAddClassAnnotation & korrekt & korrekt & nicht 			betroffen &  \\ \hline
+ & testChangeClassAnnotation & korrekt & korrekt & nicht 			betroffen &  \\ \hline
+ & testRemoveClassAnnotation & korrekt & korrekt & nicht 			betroffen &  \\ \hline
+testClassHeader 			(IA) & testAddAbstract & korrekt & korrekt & nicht 			betroffen &  \\ \hline
+ & testChangeAbstractToFinal & korrekt & korrekt & nicht 			betroffen &  \\ \hline
+ & testRenameClass & nicht 			überprüft & nicht 			überprüft & nicht 			überprüft & Vitruv throws an exception when a class is removed. Because rename class is considered as remove class with old name and create class with new name, that test fails. In tools.vitruv.domains.java.monitorededitor. ChangeResponder.visit(DeleteClassEvent) the visit(...) method tries to get some information from the already removed JDT model. \\ \hline
+testExtends (IA) & testAddImport & korrekt & korrekt & nicht 			betroffen &  \\ \hline
+ & testAddExtends & korrekt & korrekt & keine 			CPR implementiert &  \\ \hline
+ & testRemoveExtends & korrekt & korrekt & keine 			CPR implementiert &  \\ \hline
+testChangeField 			(IA) & testAddImport & korrekt & korrekt & nicht 			betroffen &  \\ \hline
+ & testAddField & korrekt & korrekt & korrekt &  \\ \hline
+ & testRenameField & korrekt & korrekt & korrekt &  \\ \hline
+ & testAddFieldModifier & korrekt & korrekt & nicht 			betroffen &  \\ \hline
+ & testChangeFieldModifier & korrekt & korrekt & nicht 			betroffen &  \\ \hline
+ & testChangeFieldType & korrekt & nicht korrekt  & nicht überprüft & ChangeFieldTypeEventRoutine does not work appropriate \\ \hline
+ & testRemoveField & nicht 			überprüft & nicht 			überprüft & nicht 			überprüft & remove 			field event is recognized as InsertEReference, but not as 			RemoveEReference. \\ \hline
+testImplements 			(IA) & testAddImport & korrekt & korrekt & korrekt &  \\ \hline
+ & testAddImplements & korrekt & korrekt & korrekt &  \\ \hline
+ & testRemoveImplements & korrekt & korrekt & korrekt &  \\ \hline
+testChangeMethodHeader 			(IA) & testRenameMethodInInterface & korrekt & korrekt & korrekt &  \\ \hline
+ & testRenameMethodInClass & korrekt & korrekt & korrekt &  \\ \hline
+ & testChangeReturnTypeInInterfaceMethod & korrekt & korrekt & korrekt &  \\ \hline
+ & testChangeReturnTypeInClassMethod & korrekt & korrekt & nicht 			betroffen &  \\ \hline
+ & testAddReturn0InClassMethod & korrekt & korrekt & nicht 			betroffen &  \\ \hline
+ & testAddFinalModifierToClassMethod & korrekt & korrekt & nicht 			betroffen &  \\ \hline
+ & testAddMethodParameterInInterface & korrekt & korrekt & korrekt &  \\ \hline
+ & testAddMethodParameterInClass & korrekt & korrekt & nicht 			betroffen &  \\ \hline
+testChangeMethod- Implementation 			(IA) & testAddInternalAction & korrekt & korrekt & korrekt &  \\ \hline
+ & testAddForLoop & korrekt & korrekt & korrekt &  \\ \hline
+ & testAddIfElse & korrekt & korrekt & korrekt &  \\ \hline
+ & testRemoveIfElse & korrekt & korrekt & korrekt &  \\ \hline
+ & testRemoveForLoop & korrekt & korrekt & korrekt &  \\ \hline
+ & testRemoveInternalAction & korrekt & korrekt & korrekt &  \\ \hline
+testCreateDelete- NonJavaFile 			(IA) & testCreateFolderAndFile & nicht 			betroffen & nicht 			betroffen & nicht 			betroffen &  \\ \hline
+ & testRenameFile & nicht 			betroffen & nicht 			betroffen & nicht 			betroffen &  \\ \hline
+ & testChangeFileContent & File-Inhalt 			korrekt & nicht 			betroffen & nicht 			betroffen &  \\ \hline
+ & testCopyFile & File-Inhalt 			korrekt & nicht 			betroffen & nicht 			betroffen &  \\ \hline
+ & testRemoveFile & nicht 			betroffen & nicht 			betroffen & nicht 			betroffen &  \\ \hline
+testCreateDelete- CompilationUnit 			(IA) & testCreateClass & korrekt & korrekt & korrekt &  \\ \hline
+ & testCreateInterface & korrekt & korrekt & korrekt &  \\ \hline
+ & testRemoveClass & nicht 			überprüft & nicht 			überprüft & nicht 			überprüft & testRemoveClass() and testRemoveInterface() doesn't work appropriate. The problem could be in the method tools.vitruv.domains.java.monitorededitor. ChangeResponder.visit(DeleteClassEvent) and tools.vitruv.domains.java.monitorededitor. ChangeResponder.visit(DeleteInterfaceEvent). The method visit(...) tries to get some information from the already removed JDT model. \\ \hline
+ & testRemoveInterface & nicht 			überprüft & nicht 			überprüft & nicht 			überprüft & The 			same problem as discribed above \\ \hline
+testCreateDeleteField 			(IA) & testAddImport & korrekt & korrekt & nicht 			betroffen &  \\ \hline
+ & testAddField & korrekt & korrekt & korrekt &  \\ \hline
+ & testRenameField & korrekt & korrekt & korrekt &  \\ \hline
+ & testRemoveCreatedField & nicht 			überprüft & nicht 			überprüft & nicht 			überprüft & Somehow remove field event is recognized by Vitruv as InsertEReference, but not as RemoveEReference. Therefore, a wrong correspondence is created \\ \hline
+ & testRemoveIntegratedField &  &  &  & The same problem as discribed above \\ \hline
+testCreateDeleteMethod 			(IA) & testCreateMethodInInterface & korrekt & korrekt & korrekt &  \\ \hline
+ & testCreateMethodInClass & korrekt & korrekt & korrekt &  \\ \hline
+ & testRemoveMethodInClass & korrekt & korrekt & korrekt &  \\ \hline
+ & testRemoveMethodInInterface & korrekt & korrekt & korrekt &  \\ \hline
+testCreateDeletePackage 			(IA) & testCreatePackage & korrekt & korrekt & korrekt &  \\ \hline
+ & testRenameCreatedPackage & korrekt & korrekt & korrekt &  \\ \hline
+ & testRemoveCreatedPackage & korrekt & korrekt & korrekt &  \\ \hline
+testClassAnnotation 			(NIA) & testAddClassAnnotation & korrekt & korrekt & nicht 			betroffen &  \\ \hline
+ & testChangeClassAnnotation & korrekt & korrekt & nicht 			betroffen &  \\ \hline
+ & testRemoveClassAnnotation & korrekt & korrekt & nicht 			betroffen &  \\ \hline
+testClassHeader 			(NIA) & testRemovePublicClassModifier & korrekt & korrekt & nicht 			betroffen &  \\ \hline
+ & testAddFinalClassModifier & korrekt & korrekt & nicht 			betroffen &  \\ \hline
+ & testChangeFinalToAbstractClassModifier & korrekt & korrekt & nicht 			betroffen &  \\ \hline
+ & testChangeAbstractToPublicClassModifier & korrekt & korrekt & nicht 			betroffen &  \\ \hline
+testExtends 			(NIA) & testAddFirstImportForExtends & korrekt & korrekt & nicht 			betroffen &  \\ \hline
+ & testAddExtends & korrekt & korrekt & keine 			CPR implementiert &  \\ \hline
+ & testAddSecondImportForExtends & korrekt & korrekt & nicht 			betroffen &  \\ \hline
+ & testChangeExtends & korrekt & korrekt & keine 			CPR implementiert &  \\ \hline
+ & testRemoveExtends & korrekt & korrekt & keine 			CPR implementiert &  \\ \hline
+ & testRemoveSecondImportForExtends & korrekt & korrekt & nicht 			betroffen &  \\ \hline
+ & testRemoveFirstImportForExtends & korrekt & korrekt & nicht 			betroffen &  \\ \hline
+testField 			(NIA) & testAddSecondClassForField & korrekt & korrekt & korrekt &  \\ \hline
+ & testAddImportForField & korrekt & korrekt & nicht 			betroffen &  \\ \hline
+ & testAddField & korrekt & korrekt & Nicht 			korrekt, kein PCM-Field erstellt & Die 			Klasse SecondClass hat kein korrespondierendes Interface =\textgreater in 			der Methode  			mir.routines.classifierBody.FieldCreated-CorrespondingToRepositoryComponent-Routine.ActionUserExecution.callRoutine1 (Classifier, 			Field, RepositoryComponent, RepositoryComponent, RoutinesFacade) 			werden keine operationProvidedRoles 			gefunden =\textgreater keine OperationRequiredRole wird ertellt \\ \hline
+ & testRenameField & korrekt &  &  &  \\ \hline
+ & testRemoveField & korrekt &  &  &  \\ \hline
+ & testRemoveImportForField & korrekt &  &  &  \\ \hline
+testImplements 			(NIA) & testAddFirstInterface & korrekt & korrekt & korrekt &  \\ \hline
+ & testAddMethodInFirstInterface & korrekt & korrekt & korrekt &  \\ \hline
+ & testAddFirstImport & korrekt & korrekt & nicht 			betroffen &  \\ \hline
+ & testAddImplementsAndMethod & korrekt & korrekt & korrekt &  \\ \hline
+ & testAddSecondInterface & korrekt & korrekt & korrekt &  \\ \hline
+ & testAddMethodInSecondInterface & korrekt & korrekt & korrekt &  \\ \hline
+ & testAddSecondImport & korrekt & korrekt & nicht 			betroffen &  \\ \hline
+ & testChangeImplementsAndAddMethod & korrekt & korrekt & korrekt &  \\ \hline
+ & testRemoveImplements & korrekt & korrekt & korrekt &  \\ \hline
+ & testRemoveBothMethods & korrekt & korrekt & korrekt &  \\ \hline
+ & testRemoveBothImports & korrekt & korrekt & nicht 			betroffen &  \\ \hline
+testChangeMethodHeader 			(NIA) & testRenameMethodInInterface & korrekt & korrekt & korrekt &  \\ \hline
+ & testRenameMethodInClass & korrekt & korrekt & korrekt &  \\ \hline
+ & testChangeReturnTypeInInterfaceMethod & korrekt & korrekt & korrekt &  \\ \hline
+ & testChangeReturnTypeInClassMethod & korrekt & korrekt & nicht 			betroffen &  \\ \hline
+ & testAddReturn0InClassMethod & korrekt & korrekt & nicht 			betroffen &  \\ \hline
+ & testAddFinalModifierToClassMethod & korrekt & korrekt & nicht 			betroffen &  \\ \hline
+ & testAddMethodParameterInInterface & korrekt & korrekt & korrekt &  \\ \hline
+ & testAddMethodParameterInClass & korrekt & korrekt & nicht 			betroffen &  \\ \hline
+testMethodImplementation 			(NIA) & testAddFirstInternalAction & korrekt & korrekt & korrekt &  \\ \hline
+ & testAddImport & korrekt & nicht 			korrekt &  &  \\ \hline
+ & testAddFirstExternalAction & korrekt &  &  &  \\ \hline
+ & testAddSecondInternalActionAndLoop WithSecondExternalAction & korrekt &  &  &  \\ \hline
+ & testAddIfElseWithInternalAction AndExternalCall & korrekt &  &  &  \\ \hline
+\caption{Ergebnisse der Case-Study. Abkürzungen: IA - Integrated Area, NIA - Non-Integrated Area, CPR - Change Propagation Rules.}
+\label{tab:casestudy}\\
+\end{longtable}
+
+%} 
+ 
+\end{tiny} 
+ 
+%Probleme:
+%\\
+%Synchronisation : 
+%EqualityHelper
+%Zugriff auf Korrespondenzen
+%Lösung: in manchen Tests Thread.sleep(5000)
+%
+%Kein OpenSource Projekt
+%
+%Kein Projekt mit einem existierenden VSUM
+%
+%Extract nicht ausführbar. Darüber hinaus, das benutzt JaMoPP
+%
+%SoMoX nicht ausführbar in Java 12
+%
+%JaMoPP problematisch
+%
+%Vitruv does not react to add/change/remove class annotation
+%
+%//testRenameClass() is disabled by now: Vitruv throws an exception when a class is removed. Because rename class 
+%//is considered as remove class with old name and create class with new name, that test fails.
+%//The problem could be in the method tools.vitruv.domains.java.monitorededitor.ChangeResponder.visit(DeleteClassEvent)
+%//visit(...) method tries to get some information from the already removed JDT model.
+%	
+%	
+%//Vitruv does not react to add/change/remove super class 
+%
+%//ChangeFieldTypeEventRoutine does not work appropriate
+%//testChangeFieldType();
+%//RemovedFieldEventRoutine can't find the field because of previous test testChangeFieldType().
+%//Second problem: somehow remove field event is recognized as InsertEReference, but not as RemoveEReference.
+%//testRemoveField();
+%
+%
+%//testRemoveClass() and testRemoveInterface() doesn't work appropriate.
+%//The problem could be in the method tools.vitruv.domains.java.monitorededitor.ChangeResponder.visit(DeleteClassEvent) 
+%//and tools.vitruv.domains.java.monitorededitor.ChangeResponder.visit(DeleteInterfaceEvent) 
+%//visit(...) method tries to get some information from the already removed JDT model.
+%	
+%//remove field doesn't work appropriate.
+%//problem: somehow remove field event is recognized by Vitruv as InsertEReference, but not as RemoveEReference.
+%//Therefore, a wrong correspondence is created
+

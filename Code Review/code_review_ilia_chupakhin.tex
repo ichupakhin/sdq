@@ -1,0 +1,56 @@
+\documentclass[twoside, ngerman, draft]{sdqthesis}
+
+\author{Ilia Chupakhin}
+
+\title{Extrahieren von Code-Änderungen aus einem Commit für kontinuierliche Integration von Leistungsmodellen}
+
+\thesistype{Codereview für eine Bachelorarbeit}
+
+\reviewerone{Prof. Dr.-Ing. Anne Koziolek}
+\reviewertwo{Prof. Dr. Ralf H. Reussner}
+
+\advisorone{M.Sc. Manar Mazkatli}
+%\advisortwo{???}
+
+%\editingtime{24. Juli 2020}
+\date{24. Juli 2020}
+\settitle
+
+
+\hyphenation{
+}
+
+%\usepackage{listings}
+%\usepackage{color}
+
+
+\usepackage[citestyle=numeric,style=numeric,hyperref,backend=biber]{biblatex}
+\usepackage{hyperref}
+\addbibresource{sections/Literatur.bib}
+
+
+\begin{document}
+
+\setpdf
+
+\maketitle
+
+\frontmatter
+
+%\input{sections/declaration.tex}
+
+\setcounter{page}{1}
+\pagenumbering{roman}
+
+\tableofcontents
+
+\mainmatter
+
+\input{sections/Einleitung.tex}
+\input{sections/Installationsanleitung.tex}
+\input{sections/Architektur.tex}
+\input{sections/Case-Study-Ergebnisse.tex}
+
+\printbibliography[heading=bibintoc]
+
+\end{document}

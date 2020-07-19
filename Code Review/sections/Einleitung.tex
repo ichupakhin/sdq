@@ -1,0 +1,10 @@
+\chapter{Einleitung}
+\label{ch:Einleitung}
+
+Ein Performance-Modell ermöglicht den Software-Entwicklern eine frühzeitige Analyse von programmierten Komponenten in Bezug auf Leistungseigenschaften, wie zum Beispiel Speicherbedarf oder Ausführungsdauer. Das Performance-Modell muss mit allen anderen im System vorhandenen Modellen konsistent gehalten werden. Falls ein Modell geändert wurde, muss auch das Performance-Modell aktualisiert werden. Allerdings ist eine Aktualisierung des Performance-Modells für große Systeme aufwändig. Ein Ansatz für eine effiziente Aktualisierung von Performance-Modellen wurde in \cite{mazkatli2018} vorgestellt und in \cite{mazkatli2020} weiterentwickelt. Wir bezeichnen diesen Ansatz als Continuos Integration of Performance Model (CIPM). 
+\\
+In dieser Bachelorarbeit implementieren wir den ersten Schritt für den CIPM-Ansatz. Wir verknüpfen den CIPM-Ansatz mit einem Git Repository und extrahieren Änderungen aus Commits. Anhand von den extrahierten Änderungen passen wir die existierenden Code-Modelle an. Anschließend werden diese Änderungen zu den Performance-Modellen automatisch propagiert. Für diesen Zweck haben wir die existierenden Change-Propagation-Regeln angepasst und einige neue Regeln implementiert.
+\\ 
+Unsere Implementierung haben wir in einer Case-Study evaluiert. Für ein Projekt haben wir unterschiedliche Arten von Änderungen simuliert und sie als Commits in einem Git-Repository gespeichert. Danach haben wir dieses Projekt in Vitruvius integriert, Änderungen aus den Commits gelesen und die entsprechenden Modelle angepasst. Anschließend haben wir die Korrektheit der aktualisierten Code- und Performance-Modelle überprüft.
+\\
+Das Kapitel \ref{ch:Installationsanleitung} enthält eine Installationsanleitung und Instruktionen für die Ausführung von Tests. In dem Kapitel \ref{ch:Architektur} beschreiben wir die Architektur unserer Implementierung und der dazu gehörenden Tests. Die Ergebnisse der durchgeführten Case-Study zeigen wir in dem Kapitel \ref{ch:Case-Study-Ergebnisse}.
