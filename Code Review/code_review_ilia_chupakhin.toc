@@ -1,0 +1,20 @@
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\babel@toc {ngerman}{}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {1}Einleitung}{1}{chapter.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {2}Installationsanleitung}{3}{chapter.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.1}Software-Installation}{3}{section.2.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.2}Ausführung von Tests}{4}{section.2.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {3}Architektur}{5}{chapter.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.1}Plugin tools.vitruv.applications.pcmjava.integrationFromGit}{6}{section.3.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.2}Plugin tools.vitruv.applications.pcmjava.integrationFromGit.test}{7}{section.3.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {4}Case-Study-Ergebnisse}{11}{chapter.4}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\nonumberline Literatur}{15}{chapter*.2}%

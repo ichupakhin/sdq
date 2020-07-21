@@ -116,11 +116,16 @@ testChangeMethodHeader 			(NIA) & testRenameMethodInInterface & korrekt & korrek
  & testAddFinalModifierToClassMethod & korrekt & korrekt & nicht 			betroffen &  \\ \hline
  & testAddMethodParameterInInterface & korrekt & korrekt & korrekt &  \\ \hline
  & testAddMethodParameterInClass & korrekt & korrekt & nicht 			betroffen &  \\ \hline
-testMethodImplementation 			(NIA) & testAddFirstInternalAction & korrekt & korrekt & korrekt &  \\ \hline
- & testAddImport & korrekt & nicht 			korrekt &  &  \\ \hline
- & testAddFirstExternalAction & korrekt &  &  &  \\ \hline
- & testAddSecondInternalActionAndLoop WithSecondExternalAction & korrekt &  &  &  \\ \hline
- & testAddIfElseWithInternalAction AndExternalCall & korrekt &  &  &  \\ \hline
+testMethodImplementation 			(NIA) & testAddImport & korrekt & korrekt & nicht betroffen &  \\ \hline
+ & testAddField & korrekt & korrekt & korrekt &  \\ \hline
+ & testAddExternalCall & korrekt & korrekt & korrekt &  \\ \hline
+ & testAddInternalAction & korrekt & korrekt & korrekt &  \\ \hline
+ & testAddFor & korrekt & korrekt & korrekt &  \\ \hline
+ & testAddIfElse & korrekt & korrekt & korrekt &  \\ \hline
+ & testRemoveIfElse & korrekt & korrekt & korrekt &  \\ \hline
+ & testRemoveFor & korrekt & korrekt & korrekt &  \\ \hline
+ & testRemoveInternalAction & korrekt & korrekt & korrekt &  \\ \hline
+ & testRemoveExternalCall & korrekt & korrekt & korrekt &  \\ \hline
 \caption{Ergebnisse der Case-Study. Abkürzungen: IA - Integrated Area, NIA - Non-Integrated Area, CPR - Change Propagation Rules.}
 \label{tab:casestudy}\\
 \end{longtable}
