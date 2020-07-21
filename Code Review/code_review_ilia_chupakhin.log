@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7300 64-bit) (preloaded format=pdflatex 2020.2.22)  21 JUL 2020 14:38
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7300 64-bit) (preloaded format=pdflatex 2020.2.22)  21 JUL 2020 19:50
 entering extended mode
 **./code_review_ilia_chupakhin.tex
 (code_review_ilia_chupakhin.tex
@@ -1887,6 +1887,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 68--68
  []
 
 
+Underfull \hbox (badness 1097) in paragraph at lines 71--71
+[]|\T1/LinuxLibertineT-TLF/m/n/6 remove field event is re-co-gni-zed by Vi-truv
+
+ []
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 73--73
 []|\T1/LinuxLibertineT-TLF/m/n/6 testCreateDeleteMethod
  []
@@ -2002,60 +2008,24 @@ Underfull \hbox (badness 10000) in paragraph at lines 93--93
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 95--95
+Underfull \hbox (badness 10000) in paragraph at lines 96--96
 []|\T1/LinuxLibertineT-TLF/m/n/6 nicht
  []
 
 
-Underfull \hbox (badness 6944) in paragraph at lines 96--96
-[]|\T1/LinuxLibertineT-TLF/m/n/6 Nicht kor-
+Underfull \hbox (badness 10000) in paragraph at lines 97--97
+[]|\T1/LinuxLibertineT-TLF/m/n/6 nicht
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 96--96
-\T1/LinuxLibertineT-TLF/m/n/6 rekt, kein
+Underfull \hbox (badness 10000) in paragraph at lines 98--98
+[]|\T1/LinuxLibertineT-TLF/m/n/6 nicht
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 96--96
-\T1/LinuxLibertineT-TLF/m/n/6 PCM-Field
- []
+Underfull \hbox (badness 1097) in paragraph at lines 99--99
+[]|\T1/LinuxLibertineT-TLF/m/n/6 remove field event is re-co-gni-zed by Vi-truv
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 96--96
-[]|\T1/LinuxLibertineT-TLF/m/n/6 Die Klas-se Se-cond-Class hat kein kor-re-
- []
-
-
-Underfull \hbox (badness 3449) in paragraph at lines 96--96
-\T1/LinuxLibertineT-TLF/m/n/6 spon-die-ren-des In-ter-face =>in der Me-tho-de
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 96--96
-\T1/LinuxLibertineT-TLF/m/n/6 mir.routines.classifierBody.FieldCreated-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 96--96
-\T1/LinuxLibertineT-TLF/m/n/6 CorrespondingToRepositoryComponent-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 96--96
-\T1/LinuxLibertineT-TLF/m/n/6 Routine.ActionUserExecution.callRoutine1
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 96--96
-\T1/LinuxLibertineT-TLF/m/n/6 (Clas-si-fier, Field, Re-po-si-to-ry-Com-po-nent,
-
- []
-
-
-Underfull \hbox (badness 1436) in paragraph at lines 96--96
-\T1/LinuxLibertineT-TLF/m/n/6 den kei-ne ope-ra-tion-Pro-vi-de-dRo-les ge-fun-d
-en
  []
 
 
@@ -2146,7 +2116,7 @@ Package logreq Info: Writing requests to 'code_review_ilia_chupakhin.run.xml'.
 Here is how much of TeX's memory you used:
  25690 strings out of 481515
  496984 string characters out of 2912531
- 1352654 words of memory out of 3000000
+ 1351654 words of memory out of 3000000
  40542 multiletter control sequences out of 15000+200000
  692608 words of font info for 153 fonts, out of 3000000 for 9000
  1143 hyphenation exceptions out of 8191
@@ -2189,7 +2159,7 @@ C:/Users/Ilia/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/libertine/Li
 nLibertineTB.pfb><C:/Users/Ilia/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/p
 ublic/libertine/LinLibertineTI.pfb><C:/Users/Ilia/AppData/Local/Programs/MiKTeX
  2.9/fonts/type1/adobe/sourcesanspro/SourceSansPro-Bold.pfb>
-Output written on code_review_ilia_chupakhin.pdf (19 pages, 337105 bytes).
+Output written on code_review_ilia_chupakhin.pdf (19 pages, 336692 bytes).
 PDF statistics:
  142 PDF objects out of 1000 (max. 8388607)
  9 named destinations out of 1000 (max. 500000)

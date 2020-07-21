@@ -68,7 +68,7 @@ testCreateDelete- CompilationUnit 			(IA) & testCreateClass & korrekt & korrekt 
 testCreateDeleteField 			(IA) & testAddImport & korrekt & korrekt & nicht 			betroffen &  \\ \hline
  & testAddField & korrekt & korrekt & korrekt &  \\ \hline
  & testRenameField & korrekt & korrekt & korrekt &  \\ \hline
- & testRemoveCreatedField & nicht 			überprüft & nicht 			überprüft & nicht 			überprüft & Somehow remove field event is recognized by Vitruv as InsertEReference, but not as RemoveEReference. Therefore, a wrong correspondence is created \\ \hline
+ & testRemoveCreatedField & nicht 			überprüft & nicht 			überprüft & nicht 			überprüft & remove field event is recognized by Vitruv as InsertEReference, but not as RemoveEReference. Therefore, a wrong correspondence is created \\ \hline
  & testRemoveIntegratedField &  &  &  & The same problem as discribed above \\ \hline
 testCreateDeleteMethod 			(IA) & testCreateMethodInInterface & korrekt & korrekt & korrekt &  \\ \hline
  & testCreateMethodInClass & korrekt & korrekt & korrekt &  \\ \hline
@@ -91,12 +91,12 @@ testExtends 			(NIA) & testAddFirstImportForExtends & korrekt & korrekt & nicht 
  & testRemoveExtends & korrekt & korrekt & keine 			CPR implementiert &  \\ \hline
  & testRemoveSecondImportForExtends & korrekt & korrekt & nicht 			betroffen &  \\ \hline
  & testRemoveFirstImportForExtends & korrekt & korrekt & nicht 			betroffen &  \\ \hline
-testField 			(NIA) & testAddSecondClassForField & korrekt & korrekt & korrekt &  \\ \hline
- & testAddImportForField & korrekt & korrekt & nicht 			betroffen &  \\ \hline
- & testAddField & korrekt & korrekt & Nicht 			korrekt, kein PCM-Field erstellt & Die 			Klasse SecondClass hat kein korrespondierendes Interface =\textgreater in 			der Methode  			mir.routines.classifierBody.FieldCreated-CorrespondingToRepositoryComponent-Routine.ActionUserExecution.callRoutine1 (Classifier, 			Field, RepositoryComponent, RepositoryComponent, RoutinesFacade) 			werden keine operationProvidedRoles 			gefunden =\textgreater keine OperationRequiredRole wird ertellt \\ \hline
- & testRenameField & korrekt &  &  &  \\ \hline
- & testRemoveField & korrekt &  &  &  \\ \hline
- & testRemoveImportForField & korrekt &  &  &  \\ \hline
+testField 			(NIA) & testAddField & korrekt & korrekt & korrekt &  \\ \hline
+ & testRenameField & korrekt & korrekt & korrekt &  \\ \hline
+ & testAddFieldModifier & korrekt & korrekt & nicht betroffen \\ \hline
+ & testChangeFieldModifier & korrekt & korrekt & nicht betroffen &  \\ \hline
+ & testChangeFieldType & korrekt & nicht korrekt & nicht überprüft & ChangeFieldTypeEventRoutine does not work appropriate \\ \hline
+ & testRemoveField & nicht überprüft & nicht überprüft & nicht überprüft & remove field event is recognized by Vitruv as InsertEReference, but not as RemoveEReference. Therefore, a wrong correspondence is created \\ \hline
 testImplements 			(NIA) & testAddFirstInterface & korrekt & korrekt & korrekt &  \\ \hline
  & testAddMethodInFirstInterface & korrekt & korrekt & korrekt &  \\ \hline
  & testAddFirstImport & korrekt & korrekt & nicht 			betroffen &  \\ \hline
