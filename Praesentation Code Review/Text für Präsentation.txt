@@ -1,0 +1,56 @@
+Folie 1 
+Motivation
+Code entwickeln -> will man Perfomance von entwickelten Komponenten erfahren bevor man das System in Betrieb setzt
+Dafür gibt es PM.
+In moderenen Software-Entwicklungsprozessen wird Continuos Integration eingesetzt. Zyklen. Das System wird mehrmals am Tag aktualisiert=>
+Performance Modell muss manuell angepasst werden => zu aufwendig
+Ansatz: es gibt CIPM Ansatz - automatische inkrementelle Anpassung von PM
+=> PIBA Folie
+
+Folie 2 PIBA
+
+Folie Grundlagen CIPM
+4 Hauptaktivitäten: Adaptive Instrumentierung
+
+1)Performance model update and adaptive instrumentation:
+CIPM analyzes the source code changes, updates the
+architectural PM and static behavior model based on the
+co-evolution approach [31] and instruments the changed
+parts of code to calibrate the new/ updated related parts
+of the architecture as will be discussed in Section VI.
+
+2) Monitoring: CIPM collects the required measurements either
+during testing or executing the system in production.
+
+3) Incremental calibration of PM (Sec. VII): CIPM performs
+the Dev-time calibration of behavior , i.e., PMPs (Sec.
+VII-A) considering the parametric dependencies (Sec.
+VIII) and the Ops-time calibration, i.e., updating the
+deployment and usage parts of PM (Sec. VII-B).
+
+4) Self-validation: CIPM automatically starts a simulation
+and calculates the variation between the simulation results
+and the monitoring data to show the estimation error
+before performing AbPP.
+ 
+ 
+Es geht um integration TEXTUELEN Änderungen aus Commits. Für CIPM ist es NOTWENDIG, 
+dass JaMoPP-Modelle nicht NEU aufgebaut, sondern AKTUALISIERT werden. Sonst müsste man Monitoring für JaMoPP-Modelle neu starten. 
+Korrespondenzen würden gelöscht.
+in Langhammers Tests werden JaMoPP-Modelle neu aufgebaut, was für CIPM nicht geeignet ist
+
+Langhammers Diss und Leonhardt -> JaMoPP-Modelle neu aufgebaut
+
+
+
+Integration of Existing Software Artifacts into a View- and Change-Driven Development
+Approach[6] ganzer Code integriert, nicht nur Commits. nur first Commit identisch. Kein Unterstützung von Git
+
+Extending an Architecture and Code Co-Evolution Approach to Support Existing Software
+Projects [8] ganzer Code integriert, nicht nur Commits. Neue Code Versionen als String + ein zusätzlicher Parser
+
+Automated Coevolution of Source Code and Software Architecture Models [5] Man muss einen speziellen Editor benutzen, keine Unterstützung von git
+
+In KEINEM dieser Ansätze wird Commit-Behandlung unterstützt
+
+
