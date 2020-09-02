@@ -41,8 +41,13 @@ public class MethodParameterNameChangedClassifier implements
 			for (MethodDeclaration md : typeIt.next().getMethods()) {
 				MethodDeclaration originalMethodDeclaration = getOriginalMethodDeclaration(
 						md,
-						previousState
-								.getOldCompilationUnit(currentCompilationUnit));
+						
+						//original line
+						//previousState.getOldCompilationUnit(currentCompilationUnit));
+						
+						//Line added by Ilia Chupakhin. This is for the case, if the compilation unit did not exist before and therefore previousState.getOldCompilationUnit(currentCompilationUnit) would return null.
+						previousState.getOldCompilationUnit(currentCompilationUnit) == null ? currentCompilationUnit : previousState.getOldCompilationUnit(currentCompilationUnit));		
+				
 				if (originalMethodDeclaration != null) {
 					events.addAll(createEventIfParameterRenamed(md,
 							originalMethodDeclaration));

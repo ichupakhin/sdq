@@ -629,7 +629,12 @@ public class ChangeResponder implements ChangeEventVisitor {
                 .getUnsavedCompilationUnitAdapter(removeFieldEvent.typeAfterRemove);
         final ConcreteClassifier classiferAfterRemove = changedCU
                 .getConcreteClassifierForTypeDeclaration(removeFieldEvent.typeAfterRemove);
-        final EChange eChange = JamoppChangeBuildHelper.createAddFieldChange(field, classiferAfterRemove);
+        
+        //Original line:
+        //final EChange eChange = JamoppChangeBuildHelper.createAddFieldChange(field, classiferAfterRemove);
+        //line added by Ilia Chupakhin:
+        final EChange eChange = JamoppChangeBuildHelper.createRemoveFieldChange(field, classiferAfterRemove);
+        
         this.util.submitVitruviusModelChange(eChange, removeFieldEvent.field);
     }
 
