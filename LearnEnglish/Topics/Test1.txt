@@ -1,4 +1,0 @@
-a:b:c:d:e;
-aa:bb:cc:dd:ee;
-aaa:bbb:ccc:ddd:eee;
-aaaa:bbbb:cccc:dddd:eeee;
