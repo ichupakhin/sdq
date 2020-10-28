@@ -1,0 +1,32 @@
+Manifest-Version: 1.0
+Created-By: Apache Maven 3.6.0
+Built-By: travis
+Build-Jdk: 11.0.2
+Bundle-ManifestVersion: 2
+Bundle-Name: Vitruvius Domains Java
+Bundle-SymbolicName: tools.vitruv.domains.java;singleton:=true
+Automatic-Module-Name: tools.vitruv.domains.java
+Bundle-Version: 0.3.0.202004201603
+Bundle-RequiredExecutionEnvironment: JavaSE-11
+Require-Bundle: com.google.guava,
+ org.eclipse.xtext.xbase.lib,
+ org.eclipse.xtend.lib,
+ org.eclipse.xtend.lib.macro,
+ org.emftext.language.java.resource.java,
+ org.eclipse.emf.ecore.xmi,
+ org.apache.log4j,
+ org.junit,
+ org.emftext.language.java;visibility:=reexport,
+ tools.vitruv.framework.metamodel;visibility:=reexport,
+ tools.vitruv.framework.util,
+ tools.vitruv.framework.tuid,
+ tools.vitruv.framework.vsum,
+ org.eclipse.core.runtime,
+ edu.kit.ipd.sdq.commons.util.java,
+ tools.vitruv.domains.java.builder,
+ org.emftext.language.java.resource,
+ tools.vitruv.applications.pcmjava.integrationFromGit;bundle-version="1.0.0"
+Export-Package: tools.vitruv.domains.java,tools.vitruv.domains.java.tuid
+ ;x-internal:=true
+Bundle-Vendor: vitruv.tools
+
