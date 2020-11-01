@@ -7,6 +7,9 @@ import org.apache.log4j.Logger;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EStructuralFeature;
+import org.emftext.commons.layout.AttributeLayoutInformation;
+import org.emftext.commons.layout.KeywordLayoutInformation;
+import org.emftext.commons.layout.ReferenceLayoutInformation;
 import org.emftext.language.java.annotations.AnnotationInstance;
 import org.emftext.language.java.annotations.SingleAnnotationParameter;
 import org.emftext.language.java.arrays.ArrayDimension;
@@ -373,6 +376,18 @@ public class JavaTuidCalculatorAndResolver extends HierarchicalTuidCalculatorAnd
     return tuid.toString();
   }
   
+  private String _calculateIndividualTuid(final ReferenceLayoutInformation referenceLayoutInformation) {
+    return "";
+  }
+  
+  private String _calculateIndividualTuid(final AttributeLayoutInformation referenceLayoutInformation) {
+    return "";
+  }
+  
+  private String _calculateIndividualTuid(final KeywordLayoutInformation referenceLayoutInformation) {
+    return "";
+  }
+  
   private String _calculateIndividualTuid(final EObject obj) {
     String _simpleName = obj.getClass().getSimpleName();
     String _plus = ("Invalid type given " + _simpleName);
@@ -485,6 +500,12 @@ public class JavaTuidCalculatorAndResolver extends HierarchicalTuidCalculatorAnd
       return _calculateIndividualTuid((NamespaceClassifierReference)newConstructorCall);
     } else if (newConstructorCall instanceof PrimitiveType) {
       return _calculateIndividualTuid((PrimitiveType)newConstructorCall);
+    } else if (newConstructorCall instanceof AttributeLayoutInformation) {
+      return _calculateIndividualTuid((AttributeLayoutInformation)newConstructorCall);
+    } else if (newConstructorCall instanceof KeywordLayoutInformation) {
+      return _calculateIndividualTuid((KeywordLayoutInformation)newConstructorCall);
+    } else if (newConstructorCall instanceof ReferenceLayoutInformation) {
+      return _calculateIndividualTuid((ReferenceLayoutInformation)newConstructorCall);
     } else if (newConstructorCall instanceof ArrayDimension) {
       return _calculateIndividualTuid((ArrayDimension)newConstructorCall);
     } else if (newConstructorCall instanceof ArraySelector) {

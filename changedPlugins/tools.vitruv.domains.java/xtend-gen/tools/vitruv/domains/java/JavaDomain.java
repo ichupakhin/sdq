@@ -5,6 +5,8 @@ import java.util.Collections;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.xtext.xbase.lib.Functions.Function1;
@@ -59,8 +61,28 @@ public final class JavaDomain extends AbstractTuidAwareVitruvDomain {
     return this.allNsURIs;
   }
   
+  @Override
+  public boolean isInstanceOfDomainMetamodel(final EObject eObject) {
+    if ((eObject == null)) {
+      return false;
+    }
+    EClass _xifexpression = null;
+    if ((eObject instanceof EClass)) {
+      _xifexpression = ((EClass)eObject);
+    } else {
+      _xifexpression = eObject.eClass();
+    }
+    final EClass eClass = _xifexpression;
+    if (((((null == eClass) || (null == eClass.getEPackage())) || (null == eClass.getEPackage().getNsURI())) || 
+      (!this.allNsURIs.contains(eClass.getEPackage().getNsURI())))) {
+      return false;
+    }
+    return true;
+  }
+  
   /**
    * //Added by Ilia Chupakhin
+   * Activate this method if using own StateBasedChangeResolutionStrategy instead of DeafaultStateBasedChangeResolutionStrategy
    * override StateBasedChangeResolutionStrategy getStateChangePropagationStrategy() {
    * return gitStateBasedChangeResolutionStrategy
    * }

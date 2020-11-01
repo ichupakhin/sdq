@@ -25,6 +25,8 @@ import tools.vitruv.applications.pcmjava.integrationFromGit.propagation.GitState
 import org.emftext.commons.layout.LayoutPackage
 import java.util.Collections
 import java.util.HashSet
+import org.eclipse.emf.ecore.EClass
+import org.eclipse.emf.ecore.EObject
 
 final class JavaDomain extends AbstractTuidAwareVitruvDomain {
 	private static final String METAMODEL_NAME = "Java";
@@ -60,8 +62,24 @@ final class JavaDomain extends AbstractTuidAwareVitruvDomain {
 		return allNsURIs
 	}
 	
+	//Added by Ilia Chupakhin
+	override boolean isInstanceOfDomainMetamodel(EObject eObject) {
+	if (eObject === null) {
+		return false;
+	}
+	val eClass = if (eObject instanceof EClass) eObject else eObject.eClass(); 
+	
+	if (null === eClass || null === eClass.getEPackage() ||	null === eClass.getEPackage().getNsURI() ||
+		!this.allNsURIs.contains(eClass.getEPackage().getNsURI())) {
+		return false
+	}
+	return true
+	}
+	
+	
 	/*
-	//Added by Ilia Chupakhin	
+	//Added by Ilia Chupakhin
+	* Activate this method if using own StateBasedChangeResolutionStrategy instead of DeafaultStateBasedChangeResolutionStrategy	
 	override StateBasedChangeResolutionStrategy getStateChangePropagationStrategy() {
 		return gitStateBasedChangeResolutionStrategy
 	}	

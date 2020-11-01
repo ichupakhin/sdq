@@ -45,6 +45,9 @@ import org.emftext.language.java.arrays.ArrayInitializer
 import org.emftext.language.java.arrays.ArraySelector
 import org.emftext.language.java.annotations.SingleAnnotationParameter
 import org.emftext.language.java.references.ReferenceableElement
+import org.emftext.commons.layout.ReferenceLayoutInformation
+import org.emftext.commons.layout.AttributeLayoutInformation
+import org.emftext.commons.layout.KeywordLayoutInformation
 
 /**
  * Tuid calculator and resolver for the JaMoPP meta-model. 
@@ -327,6 +330,28 @@ class JavaTuidCalculatorAndResolver extends HierarchicalTuidCalculatorAndResolve
 		tuid.append(classifierReference.target?.name)
 		return tuid.toString
 	}
+	
+	//Added by Ilia Chupakhin	
+	private def dispatch String calculateIndividualTuid(ReferenceLayoutInformation referenceLayoutInformation) {
+		//TODO
+		return ""
+	}
+	
+	
+	//Added by Ilia Chupakhin	
+	private def dispatch String calculateIndividualTuid(AttributeLayoutInformation referenceLayoutInformation) {
+		//TODO
+		return ""
+	}
+	
+	
+	//Added by Ilia Chupakhin	
+	private def dispatch String calculateIndividualTuid(KeywordLayoutInformation referenceLayoutInformation) {
+		//TODO
+		return ""
+	}
+	
+	
 
 	private def dispatch String calculateIndividualTuid(EObject obj) {
 		throw new IllegalArgumentException("Invalid type given " + obj.class.simpleName);
